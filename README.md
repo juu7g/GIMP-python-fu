@@ -2,11 +2,14 @@
 GIMP Python-Fu script collection
 
 ## 概要 Description
-GIMP スクリプト Python-Fu を使ったツール
+GIMP の Python-Fu  スクリプトを使ったツール
 
 ## 特徴 Features
 
-- 4つの画像をコラージュするGIMP のスクリプトを起動するバッチ  
+- 4つの画像をコラージュするGIMP のスクリプトと起動するバッチ  
+	- スクリプトファイル：`fu_collage4bat.py`
+	- 起動用バッチ　　　：`gimp_collage.bat`
+	- GIMP起動用バッチ ：`gimp_fu_collage.bat`
 
 ## 依存関係 Requirement
 
@@ -15,7 +18,7 @@ GIMP スクリプト Python-Fu を使ったツール
 
 ## 使い方 Usage
 
-- 4つの画像をコラージュするGIMP のスクリプトを起動するバッチ  
+- 4つの画像をコラージュするGIMP のスクリプトと起動するバッチ  
 	- 起動方法  
 		1. エクスプローラなどでコラージュしたい４つの画像を選択（Ctrl を押しながらクリック）
 		2. `gimp_collage.bat` に4つの画像をドラックアンドドロップ
