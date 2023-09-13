@@ -28,7 +28,12 @@ for _filename in _files:
     pdb.gimp_image_insert_layer(img, layer_id, None, 0)    # parent(None):no group, position(0):top
 
 pdb.gimp_image_resize_to_layers(img)				# キャンバスのサイズをレイヤーに合わせる
-pdb.gimp_image_scale(img, _swidth, _sheight)		# 画像の拡大縮小
+# pdb.gimp_image_scale(img, _swidth, _sheight)		# 画像の拡大縮小
+for _layer in layer_ids:
+    pdb.gimp_layer_scale(_layer, _swidth, _sheight, TRUE)
+pdb.gimp_image_resize_to_layers(img)				# キャンバスのサイズをレイヤーに合わせる
+
+pdb.gimp_message("images scaled to w:{}, h:{}".format(_swidth, _sheight))
 pdb.gimp_image_resize(img, _width, _height, 0, 0)	# キャンバスのサイズ変更
 
 pdb.gimp_message("整列開始(Alignment start)")

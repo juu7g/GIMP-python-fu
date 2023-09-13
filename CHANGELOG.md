@@ -1,5 +1,10 @@
 ﻿# GIMP-python-fu Change Log
 
+## [1.0.2] - 2023-09-13
+### Added
+- 解像度が不揃いな画像の読み込みに対応  
+	Supports loading images with uneven resolution  
+
 ## [1.0.1] - 2023-09-08
 ### Fexed
 - 画像サイズと作成する画像サイズが異なる時に正しく縮小できていなかったのを修正  

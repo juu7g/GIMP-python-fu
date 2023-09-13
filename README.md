@@ -29,6 +29,10 @@ GIMP の Python-Fu  スクリプトを使ったツール
 		- ４つの図形の境界線の幅：`border_width = 10` の10を変更(px)
 		- 境界線の色：`_color = gimpcolor.RGB(211, 211, 2111)` の数字を変更
 
+## 制限事項  
+
+- 横向きでアスペクト比が 4:3 の画像が対象  
+
 ## プログラムの説明サイト Program description site
 
 - [コラージュ処理をPython-Fuスクリプトでバッチ処理【GIMP】 - プログラムでおかえしできるかな](https://juu7g.hatenablog.com/entry/blog/gimp/collage/fu-bat)  
