@@ -1,5 +1,10 @@
 ﻿# GIMP-python-fu Change Log
 
+## [1.1.0] - 2023-09-30
+### Added
+- 4つの画像をコラージュするGIMP のスクリプトと起動するプログラムを追加  
+	Added GIMP script and startup program to collage 4 images  
+
 ## [1.0.2] - 2023-09-13
 ### Added
 - 解像度が不揃いな画像の読み込みに対応  
