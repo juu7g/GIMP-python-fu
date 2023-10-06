@@ -9,9 +9,11 @@ _color = gimpcolor.RGB(211, 211, 2111)	# 色のRGBを指定(255,255,255は白)
 
 _debug = 123456							# デバッグ用バッチで変更するのでここでは変更不可
 offset = border_width // 2
-_height = _width * 3 // 4   # アスペクト比4:3で計算
-_swidth = (_width - border_width * 3) / 2        # 横には2分割
-_sheight = (_height - border_width * 3) / 2      # 縦には2分割
+# コラージュ画像の幅、高さ、生成画像の高さを計算
+_swidth = (_width - border_width * 3) // 2  # 横に2分割した時のコラージュ画像の幅
+_sheight = _swidth * 3 // 4   # コラージュ画像の高さ アスペクト比4:3で計算
+_height = (_sheight * 2) + (border_width * 3)   # 生成画像の高さ
+
 _type = 0 # RGB(0), GRAY(1), INDEXED(2)
 # ダミーの名前を定義、後で置換して目的のファイル名にする
 _files = (r'image_file_name1', 

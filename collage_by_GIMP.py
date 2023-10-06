@@ -30,6 +30,8 @@ class GIMP_Script():
         GIMPスクリプト(バッチ)の実行
         Args:
             list:   ファイルパス(4つ)
+            tuple:  境界線の色(RGB)
+            int:    再生画像の幅
         Returns:
             int:    バッチの結果(0:OK)
         """
@@ -182,9 +184,9 @@ class MyFrame(tk.Frame):
             int:    コラージュする画像の高さ
         """
         _width = self.var_width.get()
-        _height = _width * 3 // 4   # アスペクト比4:3で計算
-        return ((_width - self.var_border.get() * 3) // 2
-                , (_height - self.var_border.get() * 3) // 2)
+        _swidth = (_width - self.var_border.get() * 3) // 2  # 横に2分割した時のコラージュ画像の幅
+        _sheight = _swidth * 3 // 4   # コラージュ画像の高さ アスペクト比4:3で計算
+        return (_swidth, _sheight)
 
     def load_image(self, path:str) -> ImageTk.PhotoImage:
         """
@@ -193,7 +195,7 @@ class MyFrame(tk.Frame):
         """
         if path:
             _img = Image.open(path)
-            _img.thumbnail((self.thumbnail_xy[0], self.thumbnail_xy[1]), Image.BICUBIC)
+            _img.thumbnail((self.thumbnail_xy[0], self.thumbnail_xy[0]), Image.BICUBIC)
         else:
             # 画像がない時の初期画像
             _img = Image.new('RGBA', (self.thumbnail_xy[0], self.thumbnail_xy[1]), (255, 0, 0, 0))  # 透明なものにしないとgifの色が変わる

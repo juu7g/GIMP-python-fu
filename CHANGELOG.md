@@ -1,5 +1,10 @@
 ﻿# GIMP-python-fu Change Log
 
+## [1.1.1] - 2023-10-06
+### Fexed
+- コラージュ画像の縮小が縦に短い問題を修正  
+	Fixed an issue where the reduction of collage images was short vertically.
+
 ## [1.1.0] - 2023-09-30
 ### Added
 - 4つの画像をコラージュするGIMP のスクリプトと起動するプログラムを追加  
