@@ -12,8 +12,8 @@ GIMP の Python-Fu  スクリプトを使ったツール
 	- GIMP起動用バッチ ：`gimp_fu_collage.bat`
 - 4つの画像をコラージュするGIMP のスクリプトと起動するプログラム  
 	- スクリプトファイル：`fu_collage.py`
-	- プログラム　　　　：collage_by_GIMP.py`
-	- 設定ファイル　　　：settings_collage.py`
+	- プログラム　　　　：`collage_by_GIMP.py`
+	- 設定ファイル　　　：`settings_collage.py`
 
 ## 依存関係 Requirement
 
